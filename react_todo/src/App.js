@@ -15,7 +15,7 @@ class App extends Component {
       {
         id: 2,
         title: 'Buy groceries',
-        completed: false 
+        completed: true 
       },
       {
         id: 3,
@@ -25,12 +25,16 @@ class App extends Component {
     ]
   }
 
+  isComplete = (id)  => {
+    console.log(id)
+}
+
   render(){
   return (
     <div className="App">
-      <Todos todo = {this.state.todos}/>
+      <Todos todo = {this.state.todos} isComplete = {this.isComplete}/>
      </div>
-  );
+  )
   }
 }
 
