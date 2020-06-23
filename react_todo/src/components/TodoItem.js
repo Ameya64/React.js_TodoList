@@ -20,6 +20,7 @@ style = () => {
                     <input type="checkbox" onChange={this.props.isComplete.bind(this,id)}/>
                     {' '}
                     {title}
+                    <button style = {delBtnStyle}>x</button>
                 </p>
             </div>
         )
@@ -29,6 +30,14 @@ style = () => {
 //PropTypes
 TodoItem.propTypes = {
     todoitem: PropTypes.object.isRequired
+}
+
+const delBtnStyle = {
+    float: 'right',
+    background: '#333',
+    color: '#fff',
+    padding: '2px 5px',
+    borderRadius: '50%'
 }
 
 export default TodoItem

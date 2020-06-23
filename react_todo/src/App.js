@@ -15,7 +15,7 @@ class App extends Component {
       {
         id: 2,
         title: 'Buy groceries',
-        completed: true 
+        completed: false 
       },
       {
         id: 3,
@@ -25,9 +25,15 @@ class App extends Component {
     ]
   }
 
+  //Completed Todo Toggle
   isComplete = (id)  => {
-    console.log(id)
-}
+    this.setState({todos: this.state.todos.map(i => {
+      if(i.id === id) {
+        i.completed = !i.completed
+      }
+      return i
+    })});
+  }
 
   render(){
   return (
