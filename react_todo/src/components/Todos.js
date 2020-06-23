@@ -5,7 +5,7 @@ class Todos extends Component {
   render(){
 
   return this.props.todo.map((i) => (
-    <TodoItem key={i.id} todoitem = {i} isComplete = {this.props.isComplete}/>
+    <TodoItem key={i.id} todoitem = {i} isComplete = {this.props.isComplete} delTodo = {this.props.delTodo} />
   ))
   }
 }
@@ -15,4 +15,4 @@ Todos.propTypes = {
   todo: PropTypes.array.isRequired
 }
 
-export default Todos;
+export default Todos
