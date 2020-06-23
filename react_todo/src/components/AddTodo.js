@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 
 export class AddTodo extends Component {
+
+    state = { 
+        title:' '
+    }
+
+    addTodo = (e) => this.setState({title : e.target.value})
+
+
     render() {
         return (
             <form style = {{display: 'flex'}}>
@@ -9,12 +17,15 @@ export class AddTodo extends Component {
                 name = "title" 
                 placeholder = "Type here..." 
                 style = {{flex: '10', padding: '15px', fontSize: '100%'}}
+                value = {this.state.title}
+                onChange = {this.addTodo}
                 />
+                
                 <input
                 type = "submit" 
                 value = "Add Task" 
                 className = "addTodoBtn"
-                style = {{flex: '1', fontSize: '100%', background: '#d1d1d1'}} 
+                style = {{flex: '1', fontSize: '100%'}} 
                 />
             </form>
         )
