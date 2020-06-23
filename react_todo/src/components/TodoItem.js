@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
 export class TodoItem extends Component {
-style = (i) => {
+style = () => {
     return {
         background: 'F6F6F6',
         padding: '10px',
