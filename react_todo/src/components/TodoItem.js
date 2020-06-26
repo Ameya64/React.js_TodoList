@@ -9,7 +9,8 @@ style = () => {
         padding: '10px',
         borderBottom: '1px solid green',
         textDecoration: this.props.todoitem.completed ? 'line-through' : 'none',
-        opacity: '0.7'
+        opacity: '0.9',
+        fontSize: '120%'
     }
 }
     

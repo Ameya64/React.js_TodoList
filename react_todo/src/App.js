@@ -8,7 +8,7 @@ import About from './components/pages/About';
 import uuid from 'uuid/dist/v4';
 
 import './App.css';
-import axios from 'axios';
+//import axios from 'axios';
 
 class App extends Component {
   state = {
