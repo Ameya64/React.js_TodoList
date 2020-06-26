@@ -15,11 +15,11 @@ style = () => {
     
 
     render() {
-        const {id, title} = this.props.todoitem
+        const {id, title, completed} = this.props.todoitem
         return (
             <div style={this.style()}>
                 <p>
-                    <input type="checkbox" onChange={this.props.isComplete.bind(this,id)}/>
+                    <input type="checkbox" checked ={completed} onChange={this.props.isComplete.bind(this,id)}/>
                     {' '}
                     {title}
                     <button className = "delBtn" onClick = {this.props.delTodo.bind(this, id)}>x</button>
@@ -31,7 +31,9 @@ style = () => {
 
 //PropTypes
 TodoItem.propTypes = {
-    todoitem: PropTypes.object.isRequired
+    todoitem: PropTypes.object.isRequired,
+    isComplete: PropTypes.func.isRequired,
+    delTodo: PropTypes.func.isRequired
 }
 
 export default TodoItem

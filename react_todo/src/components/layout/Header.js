@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return <header style = {headerStyle}>
-        <h1><a href = "index.html">Todo List</a></h1>
+        <h1><Link to = "/">Todo List</Link></h1>
+        <Link to = "/">Home</Link> | <Link to = "/about">About</Link>
     </header>
 }
 
 const headerStyle = {
     textAlign: 'center',
-    color: '#FFF',
     background: '#117A65',
     padding: '15px'
 }
