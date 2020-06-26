@@ -6,7 +6,7 @@ export class AddTodo extends Component {
         title:' '
     }
 
-    addTodo = (e) => this.setState({title : e.target.value})
+    addTodo = (e) => this.setState({[e.target.name] : e.target.value})
 
 
     render() {
